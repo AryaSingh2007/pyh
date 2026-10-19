@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block xyz %}
+<!-- heading -->
+ <div class="row">
+    <div class="col-sm-10 mx-auto py-5">
+        <div class="fs-3">
+            Cart <b class="text-color1">Summary</b>
+        </div>
+        <hr class="w-50">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid et harum minus,  architecto reiciendis laudantium quia excepturi sit dolore, omnis qui! Excepturi, voluptatibus.
+    </div>
+ </div>
+<!-- heading end -->
+ <div class="row">
+    <div class="col-sm-10 mx-auto">
+        <table class="table">
+  <thead>
+      <th scope="col">Product Id</th>
+      <th scope="col">Picture</th>
+      <th scope="col">Name</th>
+      <th scope="col">Weight</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Price</th>
+      <th scope="col">Discount Per Qt.</th>
+      <th scope="col">Total Price</th>
+      <th scope="col">Remove</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for x in data %}
+    <tr>
+      <th scope="row">{{x.pid}}</th>
+      <td><img src="/{{x.product_picture}}" height="80px" width="80px" class="img-thumbnail"></td>
+      <td>{{x.product_name}}</td>
+      <td>{{x.product_weight}}</td>
+      <td>{{x.product_quantity}}</td>
+      <td>{{x.price}}/-</td>
+      <td>{{x.discount_price}}/-</td>
+      <td>{{x.total_price}}/-</td>
+      <td><a href="/user/cart?cid={{x.id}}" class="badge bg-danger text-light rounded-pill text-decoration-none"><i class="fa-solid fa-trash"></i> Remove</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+    </div>
+ </div>
+{% endblock %}

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+    <style>
+        .bg-color1
+        {
+            background:  rgb(4, 198, 133)
+        }
+        .text-color1
+        {
+            color: rgb(4, 198, 133);
+        }
+        .bg-color2
+        {
+            background: linear-gradient(45deg,#171b55,#64288f);
+        }
+        .bg-color3{
+            background:rgba(52, 61, 60, 0.669);
+        }
+        .text-color2
+        {
+            color: #64288f;
+        }
+        .t .fa-brands
+        {
+            color:  rgb(4, 198, 133);
+            border: 1px solid rgb(4, 198, 133);
+            height: 28px;
+            width: 28px;
+            text-align: center;
+            line-height: 28px;
+            border-radius: 2px;
+        }
+        .t .fa-brands:hover
+        {
+            transform: rotate(360deg);
+            background:  rgb(4, 198, 133);
+            color: white;
+            transition: all .8s;
+        }
+        .t .fa-solid
+        {
+            color: rgb(4, 198, 133);
+        }
+       
+        #menu
+        {
+          background: rgb(4, 198, 133) !important;  
+        }
+         .menu{
+            background: rgb(4, 198, 133);
+        }
+        #menu ul li a
+        {
+            color: white;
+         
+        }
+        .slider
+        {
+           background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.8)),url("{% static 'images/4.jpg' %}"); 
+           min-height: 450px;
+           background-size: 100% 100%;
+        }
+        .btn1
+        {
+            height: 45px;
+            width: 130px;
+            text-align: center;
+            border: 3px solid rgb(4, 198, 133);
+            color: white;
+            display: block;
+            line-height: 39px;
+            text-decoration: none;
+            border-radius: 3px;
+            background: rgb(4, 198, 133);
+        }
+        .services .fa-solid
+        {
+            height: 50px;
+            width: 50px;
+            color:  rgb(4, 198, 133);
+            text-align: center;
+            line-height: 50px;
+            background: #ffede7;
+            border-radius: 3px;
+        }
+        .text-justify
+        {
+            text-align: justify;
+        }
+        .form-control
+        {
+            height: 45px;
+            margin-bottom: 3%;
+            background: rgba(0,0,0,.05) !important;
+        }
+        .txta
+        {
+            height: 143px;
+            resize: none;
+        }
+        .rs
+        {
+             height: 180px;
+        }
+        .profilediv
+        {
+            height: 150px;
+            transition: 1s;
+        }
+        .profilediv:hover
+        {
+            background: lightgrey;
+            border: 1px solid  rgb(4, 198, 133)!important;
+            transition: 1s;
+        }
+        .profile a:hover
+        {
+            background:  rgb(4, 198, 133);
+        }
+        .profileimg
+        {
+            bottom: -70px;
+            left: 360px;
+        }
+        .register a 
+        {
+            text-decoration: none;
+            color: black;
+        }
+        .register a:hover
+        {
+            color:  rgb(4, 198, 133);
+        }
+        .login
+        {
+            min-height: 150px;
+            background: white;
+            margin: 100px auto;
+            border-radius: 15px;
+            padding: 35px;
+        }
+        .dashcard
+        {
+            transition: 2s;
+        }
+        .dashcard:hover
+        {
+            transition: 2s;
+            background: lightgray;
+            transform: scale(1.05);
+        }
+        .input-group-text
+        {
+            height: 35px !important;
+            width: 35px !important;
+        }
+        .products .form-control
+        {
+            height: 35px !important;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- top section-->
+        <div class="row py-3 t">
+            <div class="col-sm-10 mx-auto">
+                <div class="row">
+                    <div class="col-sm-3 fs-3">
+                        Green<b class="text-color1">Mart <i class="fa-solid fa-cart-shopping"></i></b>
+                    </div>
+                    <div class="col-sm-3">
+                        <i class="fa-solid fa-phone"></i>
+                        +91-870376646643
+                    </div>
+                    <div class="col-sm-3 social">
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.whatsapp.com"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <div class="col-sm-3">
+                        <a href="/user/cart/" class="btn btn-outline-dark"><i class="fa-solid fa-cart-arrow-down"></i>
+                            Cart Items
+                            <span class="badge bg-dark">10</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- top section end-->
+        <div class="row t menu">
+            
+            <div class="col-sm-12 p-0">
+
+                <div class="row">
+                    <!-- start menu -->
+                     <div class="col-sm-8 p-0 mx-auto">
+                        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="menu">
+  <div class="container-fluid">
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/user/index/"><i class="fa-solid fa-house text-light"></i> Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/user/about/"><i class="fa-solid fa-info text-light"></i> About Us</a>
+        </li>
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/user/products/"><i class="fa-solid fa-bag-shopping text-light"></i> Our Product</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="/user/registration/"><i class="fa-solid fa-user-plus text-light"></i> Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/user/gallery/"><i class="fa-solid fa-image text-light"></i> Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/user/contact/"><i class="fa-solid fa-phone-volume text-light"></i> Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/user/team/"><i class="fa-solid fa-users text-light"></i> Team</a>
+        </li>
+       
+        <li class="nav-item">
+          <a class="nav-link" href="/user/login/"><i class="fa-solid fa-arrow-right-to-bracket text-light"></i> Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+                     </div>
+                    <!-- end menu -->
+                </div>
+            </div>
+          
+        </div>
+
+        {% block xyz %}
+
+        {% endblock %}
+
+        
+
+        <!-- services -->
+         <div class="row services">
+            <div class="col-sm-10 mx-auto p-3">
+                <div class="row">
+                    <!-- sbox -->
+                     <div class="col-sm-4 p-3">
+                        <div class="shadow-lg p-3">
+                            <i class="fa-solid fa-user"></i> <b>Become a member</b>
+                        </div>
+                     </div>
+                    <!-- sbox end -->
+                    <!-- sbox -->
+                     <div class="col-sm-4 p-3">
+                        <div class="shadow-lg p-3">
+                            <i class="fa-solid fa-user"></i> <b>Become a member</b>
+                        </div>
+                     </div>
+                    <!-- sbox end -->
+                    <!-- sbox -->
+                     <div class="col-sm-4 p-3">
+                        <div class="shadow-lg p-3">
+                            <i class="fa-solid fa-user"></i> <b>Become a member</b>
+                        </div>
+                     </div>
+                    <!-- sbox end -->
+                    <!-- sbox -->
+                     <div class="col-sm-4 p-3">
+                        <div class="shadow-lg p-3">
+                            <i class="fa-solid fa-user"></i> <b>Become a member</b>
+                        </div>
+                     </div>
+                    <!-- sbox end -->
+                    <!-- sbox -->
+                     <div class="col-sm-4 p-3">
+                        <div class="shadow-lg p-3">
+                            <i class="fa-solid fa-user"></i> <b>Become a member</b>
+                        </div>
+                     </div>
+                    <!-- sbox end -->
+                    <!-- sbox -->
+                     <div class="col-sm-4 p-3">
+                        <div class="shadow-lg p-3">
+                            <i class="fa-solid fa-user"></i> <b>Become a member</b>
+                        </div>
+                     </div>
+                    <!-- sbox end -->
+                </div>
+            </div>
+         </div>
+        <!-- end services -->
+
+        
+
+        
+
+        
+
+        
+
+        <!-- footer1 -->
+         <div class="row text-light bg-dark p-4 " style="min-height: 300px;">
+            
+            <div class="col-sm-3 p-4">
+                <h3 class="">Hello</h3>
+                <ul>
+                    <li>gftrutud</li>
+                    <li>gftrutud</li>
+                    <li>gftrutud</li>
+                    <li>gftrutud</li>
+                    <li>gftrutud</li>
+                </ul>
+            </div>
+             <div class="col-sm-3 p-4">
+                <h3 class="">Hello</h3>
+                <ul>
+                    <li>gftrutud</li>
+                    <li>gftrutud</li>
+                    <li>gftrutud</li>
+                    <li>gftrutud</li>
+                    <li>gftrutud</li>
+                </ul>
+            </div>
+             <div class="col-sm-3 p-4">
+                <h3 class="">Hello</h3>
+                <ul>
+                    <li>gftrutud</li>
+                    <li>gftrutud</li>
+                    <li>gftrutud</li>
+                    <li>gftrutud</li>
+                    <li>gftrutud</li>
+                </ul>
+            </div>
+             <div class="col-sm-3 p-4">
+                <h3 class="">Hello</h3>
+                <ul>
+                    <li>gftrutud</li>
+                    <li>gftrutud</li>
+                    <li>gftrutud</li>
+                    <li>gftrutud</li>
+                    <li>gftrutud</li>
+                </ul>
+            </div>
+            <div class="col-sm-3 p-4"></div>
+            <div class="col-sm-3 p-4"></div>
+            <div class="col-sm-3 p-4"></div>
+         </div>
+        <!-- end footer1 -->
+
+        <!-- footer2 -->
+         <div class="row bg-dark mt-1 text-light text-center py-3">
+            <div class="col-sm-6">
+                <b>Cpywrite to &copy; :</b> <a href="https://www.techpile.in">Techpile Technology Private Limited</a>
+            </div>
+            <div class="col-sm-6">
+                <b>Designed & Developed By :</b> <a href="/user/profile/">Arya Singh</a>
+            </div>
+         </div>
+        <!-- end footer2 -->
+        
+    </div>
+    <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+</body>
+</html>

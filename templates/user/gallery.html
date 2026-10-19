@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block xyz %}
+<!-- gallery -->
+         <div class="row gallery py-5 bg-color2 text-light">
+            <div class="col-sm-10 mx-auto">
+                <div class="row">
+                    <p class="fs-3">Image <b class="text-color1">Gallery</b></p>
+                    <hr class="w-25">
+                </div>
+                <div class="row">
+                    <!-- gbox -->
+                     {% for x in gdata %}
+                     <div class="col-sm-3">
+                        <div class=" p-3 shadow-lg bg-light">
+                        <img src="/{{x.picture}}" class="img-thumbnail">
+                        <h5 class="text-center text-bold text-dark">{{x.title}}</h5>
+                        </div>
+                     </div>
+                     {% endfor %}
+                    <!-- gbox end -->
+                </div>
+            </div>
+         </div>
+        <!-- end gallery -->
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block xyz %}
+<div class="row bg-light">
+    <div class="col-sm-4 mx-auto login register">
+        <p class="h2 text-center">Login <b class="text-color1">Now<i class="fa-solid fa-key fa-spin"></i></b></p>
+        <div class="py-4">
+            <b class="badge bg-success">{{msg}}</b>
+            <form method="post">
+                {% csrf_token %}
+                <input type="email" placeholder="Enter your Email" required name="email" class="form-control">
+                <input type="password" placeholder="Enter your Password" required name="password" class="form-control">
+                <a href="/user/registration">Not Registered? Register Now</a>
+                <input type="submit" value="Login Now" class="btn1 mt-2">
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

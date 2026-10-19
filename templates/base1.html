@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+    <title>ADMIN</title>
+    <style>
+        .bg-color1
+        {
+            background: #ee4f1e;
+        }
+        .text-color1
+        {
+            color: #ee4f1e;
+        }
+        .bg-color2
+        {
+            background: linear-gradient(45deg,#171b55,#64288f);
+        }
+        .text-color2
+        {
+            color: #64288f;
+        }
+        .t .fa-brands
+        {
+            color: #ee4f1e;
+            border: 1px solid #ee4f1e;
+            height: 28px;
+            width: 28px;
+            text-align: center;
+            line-height: 28px;
+            border-radius: 2px;
+        }
+        .t .fa-brands:hover
+        {
+            transform: rotate(360deg);
+            background: #ee4f1e;
+            color: white;
+            transition: all .8s;
+        }
+        .t .fa-solid
+        {
+            color: #ee4f1e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- Top Section -->
+         <div class="row t bg-dark text-light py-2">
+                    <div class="col-sm-6 fs-3">
+                        <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" 
+                        class="text-decoration-none text-color1"> <i class="fa-solid fa-bars"></i>Menu</a>
+                        Cart<b class="text-color1">Craft Customer<i class="fa-solid fa-cart-shopping"></i></b>
+                    </div>
+                    <div class="col-sm-3 text-center py-2">
+                        <i class="fa-solid fa-user"></i>
+                        <b>
+                            {% if request.session.email %}
+                            {{request.session.email}}
+                            {{request.session.uname}}
+                            
+                        </b>
+                        <img src="/{{request.session.upic}}" class="rounded-circle border p-1" height="50px" width="50px">
+                        {% endif %}
+                    </div>
+                    <div class="col-sm-3 text-end py-2">
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.whatsapp.com"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+        <!-- Top Section end -->
+        <!-- menu -->
+<div class="offcanvas offcanvas-start bg-dark text-light" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Offcanvas with body scrolling</h5>
+    <button type="button" class="btn-close" style="color: red !important;" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <p><a href="/customer/index" class="text-decoration-none text-light"> <i class="fa-solid fa-chart-bar"></i> Dashboard</a></p>
+    <p><a href="#" class="text-decoration-none text-light"> <i class="fa-solid fa-chart-bar"></i> Dashboard</a></p>
+    <p><a href="#" class="text-decoration-none text-light"> <i class="fa-solid fa-chart-bar"></i> Dashboard</a></p>
+    <p><a href="#" class="text-decoration-none text-light"> <i class="fa-solid fa-chart-bar"></i> Dashboard</a></p>
+    <p><a href="/customer/profile" class="text-decoration-none text-light"> <i class="fa-solid fa-user"></i> My Profile</a></p>
+    <p><a href="/customer/logout" class="text-decoration-none text-light"> <i class="fa-solid fa-power-off"></i> Logout</a></p>
+  </div>
+</div>
+        <!-- menu end -->
+        {% block xyz %}
+        {% endblock %}
+        <!-- footer1 -->
+         <div class="row bg-dark text-light text-center py-2">
+            <div class="col-sm-6">
+                &copy; To : Techpile Technology Pvt. Ltd.
+            </div>
+            <div class="col-sm-6">
+                Developed By : Er Shaivi sen
+            </div>
+         </div>
+        <!-- footer1 end -->
+    </div>
+    <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+</body>
+</html>

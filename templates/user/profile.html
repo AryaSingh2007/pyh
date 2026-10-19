@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block xyz %}
+<div class="row py-3">
+    <div class="col-sm-10 mx-auto">
+        <p class="fs-3">About <b class="text-color1">Me</b></p>
+        <hr class="w-25">
+        <div class="row p-4 shadow-lg">
+            <div class="col-sm-4">
+                <img src="{% static 'images/profile.jpg' %}" class="img-fluid">
+            </div>
+            <div class="col-sm-8">
+                <div>
+                    <h5>Er Arya Singh</h5>
+                    <hr class="w-25 m-0">
+                    <span>Software Developer</span><br>
+                    <b>Skill</b><br>
+                    <span class="badge bg-dark">HTML</span>
+                    <span class="badge bg-dark">CSS</span>
+                    <span class="badge bg-dark">Bootstrap</span>
+                    <span class="badge bg-dark">JavaScript</span>
+                    <span class="badge bg-dark">Database</span>
+                    <span class="badge bg-dark">Python Programming</span>
+                    <span class="badge bg-dark">Django</span>
+                    <hr>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut commodi modi ipsum architecto explicabo.
+                    Facilis fugit perferendis quod delectus inventore, magni eius ea velit ut, commodi illum magnam 
+                    repudiandae architecto. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae aperiam enim 
+                    dolorem corporis architecto alias minima quidem maiores quo eius tempora aut sed, neque, nesciunt 
+                    expedita, quisquam dicta inventore at <br>
+                    <hr>
+                    <div class="t">
+                    <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.whatsapp.com"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
